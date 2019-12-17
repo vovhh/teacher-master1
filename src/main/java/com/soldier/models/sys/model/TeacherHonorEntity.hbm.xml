@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.soldier.models.sys.model.TeacherHonorEntity" table="teacher_honor" schema="teacher_files">
+        <id name="honorId">
+            <column name="honorId" sql-type="bigint(20)"/>
+        </id>
+        <property name="honorName">
+            <column name="honor_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="memberCode">
+            <column name="member_code" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="memberName">
+            <column name="member_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="honorTime">
+            <column name="honor_time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="deptId">
+            <column name="dept_id" sql-type="bigint(20)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

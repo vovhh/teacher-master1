@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.soldier.models.sys.model.TeacherEntity" table="teacher" schema="teacher_files">
+        <id name="teacherId">
+            <column name="teacher_id" sql-type="int(11)"/>
+        </id>
+        <property name="teacherCode">
+            <column name="teacher_code" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="teacherName">
+            <column name="teacher_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="teacherSex">
+            <column name="teacher_sex" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="teacherBirth">
+            <column name="teacher_birth" sql-type="date" not-null="true"/>
+        </property>
+        <property name="entryTime">
+            <column name="entry_time" sql-type="date" not-null="true"/>
+        </property>
+        <property name="teacherImg">
+            <column name="teacher_img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="highEdu">
+            <column name="high_edu" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="firstEdu">
+            <column name="first_edu" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="technicalPost">
+            <column name="technical_post" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="administPost">
+            <column name="administ_post" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="teacherResume">
+            <column name="teacher_resume" sql-type="varchar(2000)" length="2000" not-null="true"/>
+        </property>
+        <property name="other">
+            <column name="other" sql-type="varchar(2000)" length="2000" not-null="true"/>
+        </property>
+        <property name="canLook">
+            <column name="can_look" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="roleId">
+            <column name="role_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="roleName">
+            <column name="role_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="unitIds">
+            <column name="unit_ids" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="deptId">
+            <column name="dept_id" sql-type="bigint(20)" not-null="true"/>
+        </property>
+        <property name="deptName">
+            <column name="dept_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
